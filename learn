@@ -14,4 +14,4 @@ binary search
 dfs
 bfs
 sliding
-use unordered map to store multiple data
+use unordered map to store multiple data => hash table
