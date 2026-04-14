@@ -39,3 +39,46 @@ public:
         return dp[n][m];
     }
 };
+
+// //learn from yt
+// class Solution
+// {
+//     #define MAX 10000000000000LL
+//     using 11 = long long;
+
+//     11 mincost(vector<int> &robot, int robo_pos, vector<int> &factories, int fact_pos, vector<vector<11>> &mem)
+//     {
+//         if (robo_pos < 0)
+//             return 0; // If all robots are repaired
+//         if (fact_pos < 0)
+//             return MAX; // If some robots are left but factories are over
+//         if (mem[robo_pos][fact_pos] != -1)
+//             return mem[robo_pos][fact_pos];
+
+//         11 include = abs(robot[robo_pos] - factories[fact_pos]) + mincost(robot, robo_pos - 1, factories, fact_pos - 1, mem);
+
+//         11 exclude = mincost(robot, robo_pos, factories, fact_pos - 1, mem);
+
+//         return mem[robo_pos][fact_pos] = min(include, exclude);
+//     }
+
+// public:
+//     long long minimumTotalDistance(vector<int> &robot, vector<vector<int>> &factory)
+//     {
+//         sort(robot.begin(), robot.end());
+//         sort(factory.begin(), factory.end());
+
+//         // Convert multi-instance factory to single instance
+//         vector<int> factories;
+//         for (int i = 0; i < factory.size(); ++i)
+//         {
+//             int pos = factory[i][0];
+//             int count = factory[i][1];
+//             for (int j = 0; j < count; ++j)
+//                 factories.push_back(pos);
+
+//             vector<vector<11>> mem(robot.size(), vector<11>(factories.size(), -1));
+//             return mincost(robot, robot.size() - 1, factories, factories.size() - 1, mem);
+//         }
+//     }
+// }
