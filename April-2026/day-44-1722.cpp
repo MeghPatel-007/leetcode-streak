@@ -60,5 +60,4 @@ int minimumHammingDistance(vector<int>& source, vector<int>& target, vector<vect
     }
 
     return ans;
-}
-};
+}};
