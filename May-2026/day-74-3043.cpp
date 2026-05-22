@@ -8,7 +8,6 @@ public:
     {
         unordered_set<string> st;
 
-        // Store all prefixes of arr1
         for (int num : arr1)
         {
             string s = to_string(num);
@@ -24,7 +23,6 @@ public:
 
         int ans = 0;
 
-        // Check prefixes of arr2
         for (int num : arr2)
         {
             string s = to_string(num);
