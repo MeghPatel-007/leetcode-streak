@@ -1,4 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+class Solution {
+public:
+    int maximumElementAfterDecrementingAndRearranging(vector<int>& arr) {
+        sort(arr.begin(),arr.end());
+        arr[0] = 1;
+        int n = arr.size();
+        for(int i=1;i<n;i++){
+            arr[i] = min(arr[i],arr[i-1]+1);
+        }
+        return arr[n-1];
+    }
+};
