@@ -4,6 +4,7 @@ using namespace std;
 class Solution
 {
 public:
+    // manhatten dist
     bool canReach(vector<int> &start, vector<int> &target)
     {
         int startSum = start[0] + start[1];
