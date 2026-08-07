@@ -67,7 +67,7 @@ public:
         {
             ll required = remainingFactor[i];
             int freeSlots = n - i - 1;
-            a for (int d = (num[i] - '0') + 1; d <= 9; d++)
+            for (int d = (num[i] - '0') + 1; d <= 9; d++)
             {
                 ll furtherRequired = required / gcd(required, d);
                 string requiredNumber = freeSlotsFiller(furtherRequired, freeSlots);
