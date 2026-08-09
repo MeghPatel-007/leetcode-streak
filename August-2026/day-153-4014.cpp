@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// * two pointers
 class Solution
 {
 public:
