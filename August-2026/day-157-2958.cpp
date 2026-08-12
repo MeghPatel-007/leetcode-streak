@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// * sliding window
+// * sliding window Tc = O(2n)
 class Solution
 {
 public:
