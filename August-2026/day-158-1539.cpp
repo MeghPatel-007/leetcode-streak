@@ -14,7 +14,7 @@ public:
         {
             int mid = l + (r - l) / 2;
             int missing = arr[mid] - (mid + 1);
-            if (k < missing)
+            if (k <= missing)
             {
                 r = mid - 1;
             }
