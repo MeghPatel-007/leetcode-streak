@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// * Binary search on 2D matrix
 class Solution
 {
 public:
