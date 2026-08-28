@@ -19,9 +19,11 @@ class dll
 {
 public:
     Node *head;
+    Node *tail;
     dll(Node *head = new Node())
     {
         this->head = head;
+        this->tail = head;
     }
     void insertNode(int newData)
     {
@@ -33,6 +35,24 @@ public:
         }
         travs->next = newNode;
         newNode->prev = travs;
+        this->tail = newNode;
+    }
+    void deleteNode()
+    {
+        if (this->head == nullptr && this->tail == nullptr)
+            return;
+        if (this->head->next == nullptr)
+        {
+            delete this->head;
+            this->head = nullptr;
+            this->tail = nullptr;
+            return;
+        }
+        Node *travs = this->tail;
+        this->tail = travs->prev;
+        this->tail->next = nullptr;
+        delete travs;
+        return;
     }
     void insertNodeBeforeHead(int newData)
     {
@@ -51,6 +71,16 @@ public:
         }
         cout << endl;
     }
+    void reversePrintList(Node *head)
+    {
+        Node *travs = head;
+        while (travs != nullptr)
+        {
+            cout << travs->data << " ";
+            travs = travs->prev;
+        }
+        cout << endl;
+    }
 };
 
 int main()
@@ -65,5 +95,8 @@ int main()
     d1->insertNodeBeforeHead(20);
     d1->insertNodeBeforeHead(30);
     d1->printList();
+    d1->deleteNode();
+    d1->printList();
+    d1->reversePrintList(d1->tail);
     return 0;
 }
