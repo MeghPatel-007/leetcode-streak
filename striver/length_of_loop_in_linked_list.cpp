@@ -27,7 +27,6 @@ public:
         Node *fast = head;
         int len = 1;
 
-        // Detect cycle
         while (fast != nullptr && fast->next != nullptr)
         {
             slow = slow->next;
@@ -39,12 +38,10 @@ public:
             len++;
         }
 
-        // No cycle found
         return -1;
     }
 };
 
-// Main driver function
 int main()
 {
     Node *head = new Node(1);
