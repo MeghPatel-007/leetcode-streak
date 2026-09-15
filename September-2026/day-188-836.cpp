@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// * Geometry
 class Solution
 {
 public:
