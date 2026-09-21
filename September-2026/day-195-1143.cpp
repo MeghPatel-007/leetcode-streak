@@ -27,6 +27,7 @@ public:
     {
         int n = text1.length();
         int m = text2.length();
+        // memoday
         // vector<vector<int>> t(n + 1, vector<int>(m + 1, -1));
         vector<vector<int>> t(n + 1, vector<int>(m + 1, 0));
         for (int i = 1; i <= n; i++)
