@@ -9,11 +9,10 @@ public:
     {
         int n = start ^ goal;
         int cnt = 0;
-        while (n != 0)
+        for (int i = 0; i < 31; i++)
         {
-            if (n & 1)
+            if (n & (1 << i))
                 cnt++;
-            n = n >> 1;
         }
         return cnt;
     }
